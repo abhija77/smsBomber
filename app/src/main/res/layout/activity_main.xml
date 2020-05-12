@@ -1,17 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World"
-        android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginBottom="300px"
+        tools:ignore="MissingConstraints">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/call"
-        android:text="Call Friends"/>
-</LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Parameters"
+            android:id="@+id/btnParameter"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contacts"
+            android:padding="5dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp"
+            android:visibility="visible"
+            />
+
+            <ListView
+                android:id="@+id/lstContacts"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible"
+                />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
